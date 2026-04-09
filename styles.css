@@ -26,7 +26,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .ellipsis-icon:hover {
