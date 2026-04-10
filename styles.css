@@ -67,7 +67,7 @@ body {
   gap: 6px;
   padding: 6px;
   border-radius: 4px;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.15s linear;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -75,9 +75,16 @@ body {
   font: inherit;
 }
 
+.window-item-expand {
+  justify-content: space-between;
+}
+
+.window-item-expand .window-item-text {
+  margin-right: auto;
+}
+
 .window-item:hover {
   background-color: rgba(13, 13, 13, 0.06);
-  cursor: pointer;
 }
 
 .window-item-icon {
@@ -94,9 +101,66 @@ body {
   height: 18px;
 }
 
+.secondary-window {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 13, 13, 0.1);
+  box-shadow: 0 8px 12px rgba(13, 13, 13, 0.1);
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.secondary-window.is-open {
+  display: flex;
+}
+
+.secondary-window-item {
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.15s linear;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+}
+
+.secondary-window-item:hover {
+  background-color: rgba(13, 13, 13, 0.06);
+}
+
+.secondary-window-item img {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s linear, visibility 0.15s linear;
+}
+
+.secondary-window-item:hover img {
+  opacity: 1;
+  visibility: visible;
+}
+
 .title {
   font-size: 15px;
   line-height: 21px;
+}
+
+.sub-title {
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .separator {

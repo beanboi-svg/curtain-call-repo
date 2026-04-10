@@ -33,13 +33,31 @@
                     </div>
                 </button>
                 <div class="separator"></div>
-                <button type="button" class="window-item">
+                <button type="button" class="window-item window-item-expand" id="help-item" aria-expanded="false" aria-controls="secondary-window">
                     <div class="window-item-icon">
                         <img draggable="false" src="assets/help.svg" alt="help icon"> 
                     </div>
                     <div class="window-item-text">
                         <div class="title">Help</div>
                     </div>
+                    <div class="window-item-icon" id="help-expand-chevron">
+                        <img draggable="false" src="assets/expand.svg" alt="expand icon"> 
+                    </div>
+                </button>
+            </div>
+            <div class="secondary-window" id="secondary-window">
+                <button type="button" class="secondary-window-item">
+                    <span class="sub-title">Help center</span>
+                    <img draggable="false" src="assets/up-arrow.svg" alt="up arrow icon">
+                </button>
+                <button type="button" class="secondary-window-item">
+                    <span class="sub-title">Report a bug</span>
+                </button>
+                <button type="button" class="secondary-window-item">
+                    <span class="sub-title">Feedback</span>
+                </button>
+                <button type="button" class="secondary-window-item">
+                    <span class="sub-title">Terms & policies</span>
                 </button>
             </div>
         </div>
