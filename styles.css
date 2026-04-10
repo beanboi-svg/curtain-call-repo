@@ -73,6 +73,7 @@ body {
   background: transparent;
   text-align: left;
   font: inherit;
+  color: #0d0d0d;
 }
 
 .window-item-expand {
@@ -126,12 +127,13 @@ body {
   gap: 6px;
   padding: 6px;
   border-radius: 4px;
-  transition: background-color 0.15s linear;
+  transition: background-color;
   cursor: pointer;
   border: none;
   background: transparent;
   text-align: left;
   font: inherit;
+  color: #0d0d0d;
 }
 
 .secondary-window-item:hover {
@@ -145,12 +147,19 @@ body {
   flex-shrink: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.15s linear, visibility 0.15s linear;
+  transition: none;
 }
 
 .secondary-window-item:hover img {
   opacity: 1;
   visibility: visible;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .secondary-window-item img {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .title {
